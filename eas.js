@@ -9,7 +9,7 @@ function addDivs(n){
     }
 }
 
-addDivs(256);
+addDivs(10000);
 
 
 let gridSquares = mainContainer.querySelectorAll(".grid-square");
@@ -21,3 +21,15 @@ function lightSquare(e){
 
 gridSquares.forEach((item, index) => gridSquares[index].addEventListener('mouseover', lightSquare));
 
+let resetButton = document.getElementById('reset');
+
+resetButton.addEventListener('click', resetGrid);
+
+function resetGrid(){
+    gridSquares.forEach((item, index) => gridSquares[index].classList.remove('lit'));
+    newGrid();
+}
+
+function newGrid(){
+    
+}
