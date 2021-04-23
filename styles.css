@@ -1,14 +1,13 @@
 #main-container{
     display: grid;
     width: 960px;
-    height: 960px;
+    height: 960px;    
     grid-template-columns: repeat(100, 1fr);
     grid-template-rows: repeat(100, 1fr);
 }
 
 .grid-square{
-
-    border: 1px solid lightgray
+    border: 1px solid lightgray;
 }
 .lit{
     background-color: dodgerblue;

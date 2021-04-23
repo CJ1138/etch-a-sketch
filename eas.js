@@ -11,25 +11,43 @@ function addDivs(n){
 
 addDivs(10000);
 
+let gridSquares;
 
-let gridSquares = mainContainer.querySelectorAll(".grid-square");
-
+addListeners();
 
 function lightSquare(e){
     this.classList.add("lit");
 }
 
-gridSquares.forEach((item, index) => gridSquares[index].addEventListener('mouseover', lightSquare));
+function addListeners(){
+    gridSquares = mainContainer.querySelectorAll(".grid-square");
+    gridSquares.forEach((item, index) => gridSquares[index].addEventListener('mouseover', lightSquare));
+}
 
 let resetButton = document.getElementById('reset');
 
 resetButton.addEventListener('click', resetGrid);
 
+function removeSquares(){
+    while(mainContainer.firstChild){
+        mainContainer.removeChild(mainContainer.firstChild);
+    }
+}
+
 function resetGrid(){
-    gridSquares.forEach((item, index) => gridSquares[index].classList.remove('lit'));
-    newGrid();
+    removeSquares();
+    let dimensions = newGrid();
+    mainContainer.style.gridTemplateColumns="repeat(" + dimensions + ", 1fr)";
+    mainContainer.style.gridTemplateRows="repeat(" + dimensions + ", 1fr)";
+    addDivs((dimensions * dimensions));
+    addListeners();
 }
 
 function newGrid(){
-    
+    let dimension = prompt("How many boxes Per Side? (max 100)", "16");
+    if (dimension > 100){
+        alert("That's too many!");
+    } else {
+    return dimension;
+    }
 }
