@@ -22,7 +22,7 @@ function rndRGBInt(){
 }
 
 function lightSquare(e){
-    //this.style.backgroundColor="rgb(" + rndRGBInt() + "," + rndRGBInt() + "," + rndRGBInt() + ")";
+    this.style.backgroundColor="rgb(" + rndRGBInt() + "," + rndRGBInt() + "," + rndRGBInt() + ")";
     let currentOpacity = parseFloat(this.style.opacity);
     if (currentOpacity <1) {
         let newOpacity = parseFloat(this.style.opacity) + 0.1;
