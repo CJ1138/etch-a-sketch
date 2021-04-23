@@ -8,6 +8,7 @@
 
 .grid-square{
     border: 1px solid lightgray;
+    background-color: black;
 }
 .lit{
     background-color: dodgerblue;

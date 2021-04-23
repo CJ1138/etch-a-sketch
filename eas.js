@@ -5,6 +5,7 @@ function addDivs(n){
         let newDiv = document.createElement("div");
         newDiv.id = "div" + i;
         newDiv.classList.add('grid-square');
+        newDiv.style.opacity=0;
         mainContainer.appendChild(newDiv);
     }
 }
@@ -21,8 +22,14 @@ function rndRGBInt(){
 }
 
 function lightSquare(e){
-    this.style.backgroundColor="rgb(" + rndRGBInt() + "," + rndRGBInt() + "," + rndRGBInt() + ")";
-    console.log("rgb(" + rndRGBInt() + "," + rndRGBInt() + "," + rndRGBInt() + ")");
+    //this.style.backgroundColor="rgb(" + rndRGBInt() + "," + rndRGBInt() + "," + rndRGBInt() + ")";
+    let currentOpacity = parseFloat(this.style.opacity);
+    if (currentOpacity <1) {
+        let newOpacity = parseFloat(this.style.opacity) + 0.1;
+        this.style.opacity = newOpacity;
+    } else {
+        return
+    }
 }
 
 function addListeners(){
