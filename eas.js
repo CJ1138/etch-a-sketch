@@ -15,8 +15,14 @@ let gridSquares;
 
 addListeners();
 
+function rndRGBInt(){
+    let output = Math.floor(Math.random() * 256);
+    return output;
+}
+
 function lightSquare(e){
-    this.classList.add("lit");
+    this.style.backgroundColor="rgb(" + rndRGBInt() + "," + rndRGBInt() + "," + rndRGBInt() + ")";
+    console.log("rgb(" + rndRGBInt() + "," + rndRGBInt() + "," + rndRGBInt() + ")");
 }
 
 function addListeners(){
