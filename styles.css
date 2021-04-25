@@ -1,8 +1,13 @@
+h1 {
+    font-family: 'Abel', sans-serif;
+    font-size: 100px;
+    color: white;
+}
 #bezel {
     margin: 0 auto;
     border: 1px solid dodgerblue;
     background-color: dodgerblue;
-    padding: 100px 100px 100px 100px;
+    padding: 0px 100px 100px 100px;
     border-radius: 50px;
     width: 1000px;
     height: 1000px;
