@@ -44,6 +44,21 @@ h1 {
     display: flex;
     width: 400px;
     height: 150px;
-    padding: 30px;
+    padding: 0px 30px 30px 30px;
     justify-content: space-around;
+}
+button{
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
 }

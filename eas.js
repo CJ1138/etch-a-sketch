@@ -89,7 +89,6 @@ function removeSquares(){
 
 //Function to clear the grid, create a new grid and add the event listeners
 function resetGrid(){
-    removeSquares();
     setDimensions();
     addListeners();
 }
@@ -100,6 +99,7 @@ function getDimensions(){
     if (dimension > 100){
         alert("That's too many!");
     } else {
+    removeSquares();
     return dimension;
     }
 }
