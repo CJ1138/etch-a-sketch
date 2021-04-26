@@ -34,7 +34,6 @@ function rndRGBInt(){
 
 //Function to increase the opacity of a grid square by 0.1 with each mouseover event
 function lightSquare(e){
-    //this.style.backgroundColor="rgb(" + rndRGBInt() + "," + rndRGBInt() + "," + rndRGBInt() + ")";
     let currentOpacity = parseFloat(this.style.opacity);
     if (currentOpacity <1) {
         let newOpacity = parseFloat(this.style.opacity) + 0.1;
@@ -43,6 +42,37 @@ function lightSquare(e){
         return
     }
 }
+
+let colorButton = document.getElementById('color');
+colorButton.addEventListener('click', changeColor);
+
+let greyButton = document.getElementById('greyscale');
+greyButton.addEventListener('click', changeColor);
+
+function changeColor(){
+    let gridSquares = mainContainer.querySelectorAll(".grid-square");
+    let whichColor;
+    if(this.id == "color"){
+        whichColor = colorize;
+        console.log("colorize button");
+        gridSquares.forEach((item, index) => gridSquares[index].removeEventListener('mouseover', greyScale));
+    }else if(this.id = "greyscale"){
+        whichColor = greyScale;
+        console.log("greyscale button");
+        gridSquares.forEach((item, index) => gridSquares[index].removeEventListener('mouseover', colorize));
+
+    }
+    gridSquares.forEach((item, index) => gridSquares[index].addEventListener('mouseover', whichColor));
+}
+
+function colorize(){
+    this.style.backgroundColor="rgb(" + rndRGBInt() + "," + rndRGBInt() + "," + rndRGBInt() + ")";
+}
+
+function greyScale(){
+    this.style.backgroundColor="rgb(000,000,000)";
+}
+
 
 //Function to add mouseover event listeners to every grid square, and call the lightSquare function
 function addListeners(){

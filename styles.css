@@ -1,17 +1,25 @@
+body {
+    padding: 50px;
+}
 h1 {
     font-family: 'Abel', sans-serif;
     font-size: 100px;
     color: white;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 #bezel {
     margin: 0 auto;
-    border: 1px solid dodgerblue;
-    background-color: dodgerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid transparent;
+    background-color: rgb(160, 45, 45);
     padding: 0px 100px 100px 100px;
     border-radius: 50px;
     width: 1000px;
-    height: 1000px;
-    box-shadow: 0px 0px 10px 10px rgba(000,000,000,0.2);
+    height: 1250px;
+    box-shadow: 0 0 10px #000000;
     text-align: center;
 
 
@@ -31,4 +39,11 @@ h1 {
 }
 .lit{
     background-color: dodgerblue;
+}
+#buttons{
+    display: flex;
+    width: 400px;
+    height: 150px;
+    padding: 30px;
+    justify-content: space-around;
 }
