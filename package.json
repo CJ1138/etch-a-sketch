@@ -1,0 +1,23 @@
+{
+  "name": "etch-a-sketch",
+  "version": "1.0.0",
+  "description": "Fun little JS / HTML / CSS toy made to test updating the DOM with JS.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CJ1138/etch-a-sketch.git"
+  },
+  "author": "Chris Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CJ1138/etch-a-sketch/issues"
+  },
+  "homepage": "https://github.com/CJ1138/etch-a-sketch#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
